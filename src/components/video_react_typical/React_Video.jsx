@@ -1,8 +1,9 @@
 import styles from './Video.module.css';
 import video from './video.mp4';
 import React, { Component } from 'react'
-import Typical from 'react-typical'
+// import Typical from 'react-typical'
 // import Typist from 'react-typist';
+import { TypeAnimation } from 'react-type-animation';
 
 const React_Video = () => {
     return (
@@ -11,16 +12,21 @@ const React_Video = () => {
             <div className={styles.video}>
                 <video src={video} autoPlay muted />
                 <div className={styles.content}>
-                    <Typical
-                        steps={[
-                            "First", 3000,
-                            "Second", 3000,
-                            "Third", 3000,
-                            "Fourth", 3000,
-                            'Fifth', 3000,
-                            "Sixth", 3000,
+                    <TypeAnimation
+                        sequence={[
+                            // Same substring at the start will only be typed out once, initially
+                            'We produce food for Mice',
+                            1000, // wait 1s before replacing "Mice" with "Hamsters"
+                            'We produce food for Hamsters',
+                            1000,
+                            'We produce food for Guinea Pigs',
+                            1000,
+                            'We produce food for Chinchillas',
+                            1000
                         ]}
-                        loop={Infinity}
+                        wrapper="span"
+                        speed={50}
+                        repeat={Infinity}
                     />
                 </div>
             </div>
