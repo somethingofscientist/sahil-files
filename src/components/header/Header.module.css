@@ -1,0 +1,4 @@
+.header ul li{
+    display: flex;
+    background-color: red;
+}

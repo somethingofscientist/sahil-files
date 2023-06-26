@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styles from './DropDown.module.css';
-import { BsChevronDown, BsChevronUp } from 'react-icons/bs';
+import { BsChevronDown, BsChevronUp, BsGlobe2 } from 'react-icons/bs';
 import { useTranslation } from 'react-i18next';
 
 
@@ -17,13 +17,11 @@ const DropDown = ({ selected, setSelected }) => {
     return (
         <>
             <div>
-
-
                 <div className={styles.dropdown}>
                     <h1> Drop Down </h1>
                     <div className={styles.dropdown_btn}
                         onClick={(e) => setActive(!isActive)}>
-                        Choose Lang
+                        <BsGlobe2 />
                         {
                             isActive ?
                                 <div> <BsChevronUp /> </div>
@@ -63,6 +61,10 @@ const DropDown = ({ selected, setSelected }) => {
                     <p>
                         <h1 className={styles.lang}>
                             {t("hello world language will change here")}
+                            <br />
+                            {t("sahil")}
+                            <br />
+                            {t("Global")}
                         </h1>
                     </p>
                 </div>
