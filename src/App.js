@@ -2,14 +2,15 @@ import logo from './logo.svg';
 import './App.css';
 import Cars from './components/cars/Cars';
 import DropDown from './components/dropdown/DropDown';
-import React_Video from './components/video_react_typical/React_Video';
+import { useState } from 'react';
 
 function App() {
+  const [selected, setSelected] = useState("Choose ");
+
   return (
     <>
       {/* <Cars /> */}
-      {/* <DropDown /> */}
-      <React_Video />
+      <DropDown selected={selected} setSelected={setSelected} />
     </>
   );
 }

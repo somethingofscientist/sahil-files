@@ -1,35 +1,71 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './DropDown.module.css';
-import Dropdown from 'react-dropdown';
-import 'react-dropdown/style.css';
+import { BsChevronDown, BsChevronUp } from 'react-icons/bs';
+import { useTranslation } from 'react-i18next';
 
-const DropDown = () => {
+
+
+const DropDown = ({ selected, setSelected }) => {
+    const [isActive, setActive] = useState(false)
+    const options = ['Thai', 'English', 'Spanish']
+    const { t, i18n } = useTranslation();
+
+    const handleClick = (lang) => {
+        i18n.changeLanguage(lang);
+    }
 
     return (
         <>
-            <h1> Drop Down </h1>
+            <div>
 
-            <div className={styles.navbar}>
-                <div className={styles.link}>Home</div>
-                <div className={styles.link}>About</div>
-                <div className={styles.link}>
-                    More
+
+                <div className={styles.dropdown}>
+                    <h1> Drop Down </h1>
+                    <div className={styles.dropdown_btn}
+                        onClick={(e) => setActive(!isActive)}>
+                        {selected}
+                        {
+                            isActive ?
+                                <div> <BsChevronUp /> </div>
+                                :
+                                <div> <BsChevronDown /> </div>
+                        }
+                    </div>
+                    {
+                        isActive && (
+                            <div className={styles.dropdown_content}>
+                                {/* {options.map(item => (
+                                    <div
+                                        onClick={(e) => {
+                                            handleClick(item)
+                                            setSelected(item)
+                                            setActive(false)
+                                        }}
+                                        className={styles.dropdown_items}>
+                                        {item}
+                                    </div>
+                                ))} */}
+                                <nav className={styles.dropdown_items}>
+                                    <button onClick={() => handleClick('en')}>
+                                        English
+                                    </button>
+                                    <button onClick={() => handleClick('sp')}>
+                                        Spanish
+                                    </button>
+                                    <button onClick={() => handleClick('th')}>
+                                        Thai
+                                    </button>
+                                </nav>
+                            </div>
+                        )
+                    }
+
+                    <p>
+                        <h1 className={styles.lang}>
+                            {t("hello world language will change here")}
+                        </h1>
+                    </p>
                 </div>
-                <div className={styles.link}>Blogs</div>
-                <div className={styles.link}>Contact</div>
-                <div className={styles.link}>Many  More</div>
-            </div>
-
-
-            <div className={styles.container}>
-                <div className={styles.box}></div>
-                <div className={styles.box}></div>
-                <div className={styles.box}></div>
-                <div className={styles.box}></div>
-                <div className={styles.box}></div>
-                <div className={styles.box}></div>
-                <div className={styles.box}></div>
-                <div className={styles.box}></div>
             </div>
         </>
     )
