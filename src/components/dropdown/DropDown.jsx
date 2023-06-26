@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 
 const DropDown = ({ selected, setSelected }) => {
     const [isActive, setActive] = useState(false)
-    const options = ['Thai', 'English', 'Spanish']
+    // const options = ['Thai', 'English', 'Spanish']
     const { t, i18n } = useTranslation();
 
     const handleClick = (lang) => {
@@ -23,7 +23,7 @@ const DropDown = ({ selected, setSelected }) => {
                     <h1> Drop Down </h1>
                     <div className={styles.dropdown_btn}
                         onClick={(e) => setActive(!isActive)}>
-                        {selected}
+                        Choose Lang
                         {
                             isActive ?
                                 <div> <BsChevronUp /> </div>

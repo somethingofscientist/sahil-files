@@ -5,7 +5,7 @@ import DropDown from './components/dropdown/DropDown';
 import { useState } from 'react';
 
 function App() {
-  const [selected, setSelected] = useState("Choose ");
+  const [selected, setSelected] = useState("Lang");
 
   return (
     <>
