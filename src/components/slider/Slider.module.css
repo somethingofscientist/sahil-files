@@ -1,0 +1,14 @@
+.slider{
+    width: 30%;
+    /* border: 1px solid lime; */
+    /* background-color: black; */
+    /* color: white; */
+}
+.slider .images{
+    width: 100%;
+}
+.imgaes img{
+    height: 200px;
+    object-fit: contain;
+    width: 100%;
+}
