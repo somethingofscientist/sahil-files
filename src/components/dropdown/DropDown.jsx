@@ -32,17 +32,6 @@ const DropDown = ({ selected, setSelected }) => {
                     {
                         isActive && (
                             <div className={styles.dropdown_content}>
-                                {/* {options.map(item => (
-                                    <div
-                                        onClick={(e) => {
-                                            handleClick(item)
-                                            setSelected(item)
-                                            setActive(false)
-                                        }}
-                                        className={styles.dropdown_items}>
-                                        {item}
-                                    </div>
-                                ))} */}
                                 <nav className={styles.dropdown_items}>
                                     <button onClick={() => handleClick('en')}>
                                         English
