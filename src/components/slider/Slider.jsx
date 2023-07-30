@@ -22,7 +22,13 @@ const Slider = () => {
 
     return (
         <div className={styles.slider}>
-            <Carousel autoPlay={true} interval={500} infiniteLoop showStatus={false} showThumbs={false} >
+            <Carousel
+                autoPlay={true}
+                interval={500}
+                infiniteLoop
+                showStatus={false}
+                showThumbs={false}
+            >
                 {
                     arr.map((item) => (
                         <div className={styles.images}>
