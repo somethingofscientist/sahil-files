@@ -8,12 +8,14 @@ import Navbar from './components/sideNavbar/Navbar';
 import { useState } from 'react';
 import Modal from './components/modal/Modal';
 import InterviewScheduleBoard from './components/interview/InterviewScheduleBoard';
+import InfiniteScroller from './components/infiniteScroller/InfiniteScroller';
 
 function App() {
   const [selected, setSelected] = useState("Lang");
 
   return (
     <>
+      <InfiniteScroller />
       {/* <InterviewScheduleBoard /> */}
       {/* <Modal/> */}
       {/* <Cars /> */}
@@ -26,10 +28,10 @@ function App() {
 
       <h1
         style={{
-          color:"#ff8a8a",
+          color: "#ff8a8a",
           textAlign: "center"
         }}>
-        Sahil Bhai Zindabad
+        {/* Jai Shree Ram */}
       </h1>
     </>
   );
