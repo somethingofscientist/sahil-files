@@ -9,13 +9,15 @@ import { useState } from 'react';
 import Modal from './components/modal/Modal';
 import InterviewScheduleBoard from './components/interview/InterviewScheduleBoard';
 import InfiniteScroller from './components/infiniteScroller/InfiniteScroller';
+import AccordianItem from './components/Accordian/FAQ';
 
 function App() {
   const [selected, setSelected] = useState("Lang");
 
   return (
     <>
-      <InfiniteScroller />
+      <AccordianItem />
+      {/* <InfiniteScroller /> */}
       {/* <InterviewScheduleBoard /> */}
       {/* <Modal/> */}
       {/* <Cars /> */}
