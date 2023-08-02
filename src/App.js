@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-      <AccordianItem />
+      {/* <AccordianItem /> */}
       {/* <InfiniteScroller /> */}
       {/* <InterviewScheduleBoard /> */}
       {/* <Modal/> */}
@@ -33,7 +33,7 @@ function App() {
           color: "#ff8a8a",
           textAlign: "center"
         }}>
-        {/* Jai Shree Ram */}
+        Jai Shree Ram
       </h1>
     </>
   );
