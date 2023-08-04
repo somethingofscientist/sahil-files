@@ -10,12 +10,14 @@ import Modal from './components/modal/Modal';
 import InterviewScheduleBoard from './components/interview/InterviewScheduleBoard';
 import InfiniteScroller from './components/infiniteScroller/InfiniteScroller';
 import AccordianItem from './components/Accordian/FAQ';
+import Homepage from './apple/homepage/Homepage';
 
 function App() {
   const [selected, setSelected] = useState("Lang");
 
   return (
     <>
+      <Homepage />
       {/* <AccordianItem /> */}
       {/* <InfiniteScroller /> */}
       {/* <InterviewScheduleBoard /> */}
@@ -28,13 +30,13 @@ function App() {
       {/* <Navbar /> */}
 
 
-      <h1
+      {/* <h1
         style={{
           color: "#ff8a8a",
           textAlign: "center"
         }}>
         Jai Shree Ram
-      </h1>
+      </h1> */}
     </>
   );
 }
