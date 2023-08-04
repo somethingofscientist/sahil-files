@@ -14,7 +14,7 @@ function App() {
   const [selected, setSelected] = useState("Lang");
 
   return (
-    <>
+    <div>
       <Homepage />
       {/* <AccordianItem /> */}
       {/* <InterviewScheduleBoard /> */}
@@ -24,8 +24,6 @@ function App() {
       {/* <Header /> */}
       {/* <Flip/> */}
       {/* <Navbar /> */}
-
-
       {/* <h1
         style={{
           color: "#ff8a8a",
@@ -33,7 +31,7 @@ function App() {
         }}>
         Jai Shree Ram
       </h1> */}
-    </>
+    </div>
   );
 }
 
