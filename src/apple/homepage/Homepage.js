@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './Homepage.module.css';
-import black_mountain from '../../media/wallpapersden.com_macos-catalina-mountains_1600x900.jpg';
+// import black_mountain from '../../media/wallpapersden.com_macos-catalina-mountains_1600x900.jpg';
 import Reveal from 'react-reveal/Reveal';
 import Zoom from 'react-reveal/Zoom';
 import Marquee from 'react-fast-marquee';
@@ -18,7 +18,7 @@ const Homepage = () => {
                 <div className={styles.home_body}>
                     <div className={styles.banner}>
                         <Zoom effect="fadeInUp">
-                            <img src={black_mountain} alt="mountain" />
+                            {/* <img src={black_mountain} alt="mountain" /> */}
                         </Zoom>
                     </div>
                 </div>
