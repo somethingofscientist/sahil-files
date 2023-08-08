@@ -6,11 +6,15 @@ import reportWebVitals from './reportWebVitals';
 // import i18n (needs to be bundled ;)) 
 import './i18n';
 import { Suspense } from 'react';
+import { StrictMode } from 'react';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Suspense fallback={(<div> Loading...? </div>)}>
-    <App />
+    <StrictMode>
+      <App />
+    </StrictMode>
   </Suspense>
 );
 
