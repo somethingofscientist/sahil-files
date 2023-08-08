@@ -24,7 +24,9 @@ const Homepage = () => {
                 </div>
                 <div className={styles.footer}>
                     <Reveal>
-                        <h1>Your Footer</h1>
+                        <h1 style={{fontSize:"70px"}}>
+                            what is Transcation in mongoDB
+                        </h1>
                     </Reveal>
                 </div>
             </div>
